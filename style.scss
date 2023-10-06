@@ -150,12 +150,15 @@ img {
 //
 
 .wrapper-masthead {
-  margin-bottom: 50px;
+  margin-bottom: 5px;
+
 }
 
 .masthead {
   padding: 20px 0;
-  border-bottom: 2px solid $gray;
+
+
+  
 
   @include mobile {
     text-align: center;
@@ -163,9 +166,9 @@ img {
 }
 
 .site-avatar {
-  float: left;
-  width: 70px;
-  height: 70px;
+
+  height: 100%;
+  width:10%;
   margin-right: 15px;
 
   @include mobile {
@@ -174,14 +177,12 @@ img {
     margin: 0 auto;
   }
 
-  img {
-    border-radius: 5px;
-  }
+
 }
 
 .site-info {
 
-
+    margin-top: 40px;
   @include mobile {
     float: none;
     display: block;
@@ -209,6 +210,7 @@ img {
 }
 
 nav {
+  background: $black;
   float: none;
   text-align: center;
   margin-top: 23px; // @TODO: Vertically middle align
@@ -246,7 +248,7 @@ socialmedia {
 
 .posts > .post {
   padding-bottom: 2em;
-  border-bottom: 2px solid $lightGray;
+  
 }
 
 .posts > .post:last-child {
@@ -286,6 +288,7 @@ socialmedia {
 
 
 .game {
+  text-align: center;
   position: relative;
   bottom: 0px;
     &:hover .overlayimage{
@@ -295,7 +298,7 @@ socialmedia {
 
 .overlayimage {
   position: absolute;
-  bottom: 7px;
+  bottom: 0px;
   opacity: 0.95;
   background-color: $darkerGray;
   overflow: hidden;
@@ -333,7 +336,7 @@ div.container {
     justify-content: center;
     padding: 2px 2px 75px;
     grid-gap: 15px;
-    border-bottom: 2px solid $gray;
+    
     margin-bottom: 50px;
 }
 
@@ -357,6 +360,40 @@ footer {
 .platforms{
   text-align: center;
 
+
+}
+
+.news{
+  max-width:none;
+  
+
+}
+
+.vid{
+  padding: 20px;
+}
+
+.news-title h1{
+text-align:center;
+  width: 50%;
+
+  border-width: 2px;
+  border-style: solid;
+
+  border: 10px solid;
+  border-image-slice: 1;
+  border-width: 2px;
+
+  border-image-source: linear-gradient(to right, $darkerGray , $gray 10%, $gray 90%, $darkerGray);
+
+  color:$gray;
+  margin: auto;
+   padding: 10px;
+}
+
+.only-top h1{
+  border-left: 0;
+  border-right: 0;
 
 }
 
