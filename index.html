@@ -2,17 +2,41 @@
 layout: default
 ---
 
+
 <div class="posts">
+  <div>Video Games:</div>
+  <div class="gallery">
   {% for post in site.posts %}
-    <article class="post">
+    {% if post.type == "video"%}
+      <div class="game">
+        <h1>{{ post.title }}</h1>
+        <a href="{{ site.baseurl }}{{ post.url }}"> <img src="{{-post.image | relative_url-}}" alt="" class="blog-roll-image"></a>
+        <div class="overlayimage">
+          <div class="text">        
+            {% if post.platforms contains "html"%}
+              <img src="images/html.png" alt="" class="plat-logo">
+            {% endif %}
 
-      <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
-
-      <div class="entry">
-        {{ post.excerpt }}
+            {% if post.platforms contains "steam"%}
+              <img src="images/steam.png" alt="" class="plat-logo">
+            {% endif %}</div>
+        </div>
       </div>
-
-      <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
-    </article>
+    {% endif %}
   {% endfor %}
+  </div>
+
+
+  <div>Analog Games:</div>
+  <div class="gallery">
+  {% for post in site.posts %}
+    {% if post.type == "board"%}
+      <div class="game">
+        <h1>{{ post.title }}</h1>
+        <a href="{{ site.baseurl }}{{ post.url }}"> <img src="{{-post.image | relative_url-}}" alt="" class="blog-roll-image"></a>
+      </div>
+    {% endif %}
+  {% endfor %}
+  </div>
+
 </div>

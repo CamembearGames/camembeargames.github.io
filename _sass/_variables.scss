@@ -8,16 +8,23 @@ $blue: #4183C4;
 
 // Grays
 $black: #000;
-$darkerGray: #222;
+$darkerGray: #2f3030   ;
 $darkGray: #333;
-$gray: #666;
-$lightGray: #eee;
+$gray: #ff6b6b  ;
+$lightGray: #f9e3e1   ;
 $white: #fff;
 
 // Font stacks
 $helvetica: Helvetica, Arial, sans-serif;
 $helveticaNeue: "Helvetica Neue", Helvetica, Arial, sans-serif;
-$georgia: Georgia, serif;
+$georgia: Nunito, serif;
+$nunito: Nunito, Helvetica;
+
+@font-face { 
+font-family: Nunito; 
+src: url(Nunito-VariableFont_wght.ttf); 
+font-weight: normal; 
+}
 
 // Mobile breakpoints
 @mixin mobile {

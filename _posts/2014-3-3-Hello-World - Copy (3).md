@@ -2,7 +2,7 @@
 layout: post
 title: Puppy Rescue
 image: images/PuppyRescue.png
-type: video
+type: board
 platforms: html
 state: prototype
 

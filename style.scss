@@ -18,25 +18,24 @@ html {
 }
 
 body {
-	background: $white;
-  font: 18px/1.4 $helvetica;
-  color: $darkGray;
+	background: $darkerGray;
+  font: 18px/1.4 $nunito;
+  color: $lightGray ;
 }
 
 .container {
   margin: 0 auto;
-  max-width: 740px;
+  max-width: 1080px;
   padding: 0 10px;
   width: 100%;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: $helveticaNeue;
-  color: $darkerGray;
+  color: $lightGray;
   font-weight: bold;
 
   line-height: 1.7;
-  margin: 1em 0 15px;
+  margin: 0.5em 0 15px;
   padding: 0;
 
   @include mobile {
@@ -61,7 +60,7 @@ h3 {
 
 h4 {
   font-size: 18px;
-  color: $gray;
+  color: $lightGray;
 }
 
 p {
@@ -69,11 +68,11 @@ p {
 }
 
 a {
-  color: $blue;
+  color: #8b6d9c ;
   text-decoration: none;
 	cursor: pointer;
   &:hover, &:active {
-    color: $blue;
+    color: #fbf5ef ;
   }
 }
 
@@ -117,7 +116,7 @@ img {
 
 .date {
   font-style: italic;
-  color: $gray;
+  color: $lightGray;
 }
 
 // Specify the color of the selection
@@ -156,7 +155,7 @@ img {
 
 .masthead {
   padding: 20px 0;
-  border-bottom: 1px solid $lightGray;
+  border-bottom: 2px solid $gray;
 
   @include mobile {
     text-align: center;
@@ -181,7 +180,7 @@ img {
 }
 
 .site-info {
-  float: left;
+
 
   @include mobile {
     float: none;
@@ -192,9 +191,8 @@ img {
 
 .site-name {
   margin: 0;
-  color: $darkGray;
+  color: $lightGray;
   cursor: pointer;
-  font-family: $helveticaNeue;
   font-weight: 300;
   font-size: 28px;
   letter-spacing: 1px;
@@ -202,7 +200,7 @@ img {
 
 .site-description {
   margin: -5px 0 0 0;
-  color: $gray;
+  color: $lightGray;
   font-size: 16px;
 
   @include mobile {
@@ -211,9 +209,9 @@ img {
 }
 
 nav {
-  float: right;
+  float: none;
+  text-align: center;
   margin-top: 23px; // @TODO: Vertically middle align
-  font-family: $helveticaNeue;
   font-size: 18px;
 
   @include mobile {
@@ -225,7 +223,7 @@ nav {
 
   a {
     margin-left: 20px;
-    color: $darkGray;
+    color: $lightGray;
     text-align: right;
     font-weight: 300;
     letter-spacing: 1px;
@@ -237,13 +235,18 @@ nav {
   }
 }
 
+socialmedia {
+  padding: 20px 0;
+  text-align: center;
+}
+
 //
 // .main
 //
 
 .posts > .post {
   padding-bottom: 2em;
-  border-bottom: 1px solid $lightGray;
+  border-bottom: 2px solid $lightGray;
 }
 
 .posts > .post:last-child {
@@ -271,16 +274,90 @@ nav {
   }
 }
 
+.blog-roll-image {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.5);
+
+
+
+}
+
+
+.game {
+  position: relative;
+  bottom: 0px;
+    &:hover .overlayimage{
+      height: 20%;
+    }
+}
+
+.overlayimage {
+  position: absolute;
+  bottom: 7px;
+  opacity: 0.95;
+  background-color: $darkerGray;
+  overflow: hidden;
+  width: 100%;
+  height: 0;
+  transition: .5s ease;
+}
+
+.text {
+  white-space: nowrap; 
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  overflow: hidden;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
+
+div.container {
+  text-align: left;
+  padding: 10px 20px;
+}
+
+.gallery h1 {
+  text-align: center;
+}
+
+.gallery {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(200px, 1fr));
+    justify-content: center;
+    padding: 2px 2px 75px;
+    grid-gap: 15px;
+    border-bottom: 2px solid $gray;
+    margin-bottom: 50px;
+}
+
 .wrapper-footer {
   margin-top: 50px;
-  border-top: 1px solid #ddd;
-  border-bottom: 1px solid #ddd;
-  background-color: $lightGray;
+  background-color: #494d7e;
 }
 
 footer {
   padding: 20px 0;
   text-align: center;
+}
+
+.plat-logo {
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+  opacity: 1;
+  }
+
+.platforms{
+  text-align: center;
+
+
 }
 
 // Settled on moving the import of syntax highlighting to the bottom of the CSS

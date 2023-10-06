@@ -3,7 +3,7 @@ layout: post
 title: Puppy Rescue
 image: images/PuppyRescue.png
 type: video
-platforms: html
+platforms: html steam
 state: prototype
 
 ---
