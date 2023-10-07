@@ -384,17 +384,22 @@ text-align:center;
   border-image-slice: 1;
   border-width: 2px;
 
-  border-image-source: linear-gradient(to right, $darkerGray , $gray 10%, $gray 90%, $darkerGray);
+  border-image-source: linear-gradient(to right, $darkerGray , $gray 20%, $gray 80%, $darkerGray);
 
   color:$gray;
   margin: auto;
    padding: 10px;
 }
 
-.only-top h1{
+.news-title h1{
   border-left: 0;
   border-right: 0;
 
+}
+
+.responsive {
+  width: 100%;
+  height: auto;
 }
 
 // Settled on moving the import of syntax highlighting to the bottom of the CSS
