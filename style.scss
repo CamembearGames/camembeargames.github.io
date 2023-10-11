@@ -18,9 +18,9 @@ html {
 }
 
 body {
-	background: $darkerGray;
+	background: $background;
   font: 18px/1.4 $nunito;
-  color: $lightGray ;
+  color: $writing ;
 }
 
 .container {
@@ -31,7 +31,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  color: $lightGray;
+  color: $writing;
   font-weight: bold;
 
   line-height: 1.7;
@@ -60,7 +60,7 @@ h3 {
 
 h4 {
   font-size: 18px;
-  color: $lightGray;
+  color: $writing;
 }
 
 p {
@@ -116,17 +116,17 @@ img {
 
 .date {
   font-style: italic;
-  color: $lightGray;
+  color: $writing;
 }
 
 // Specify the color of the selection
 ::-moz-selection {
   color: $black;
-  background: $lightGray;
+  background: $writing;
 }
 ::selection {
   color: $black;
-  background: $lightGray;
+  background: $writing;
 }
 
 // Nicolas Gallagher's micro clearfix hack
@@ -167,9 +167,12 @@ img {
 
 .site-avatar {
 
-  height: 100%;
-  width:10%;
-  margin-right: 15px;
+  float: right;
+  margin-top: 40px;
+
+  height: auto;
+  width:400px;
+
 
   @include mobile {
     float: none;
@@ -181,7 +184,7 @@ img {
 }
 
 .site-info {
-
+    float:left; /* add this */
     margin-top: 40px;
   @include mobile {
     float: none;
@@ -192,16 +195,21 @@ img {
 
 .site-name {
   margin: 0;
-  color: $lightGray;
+  color: $writing;
   cursor: pointer;
   font-weight: 300;
-  font-size: 28px;
+  font-size: 64px;
   letter-spacing: 1px;
+
+  p{
+    margin: 0px;
+    line-height: 1;
+  }
 }
 
 .site-description {
   margin: -5px 0 0 0;
-  color: $lightGray;
+  color: $writing;
   font-size: 16px;
 
   @include mobile {
@@ -225,7 +233,7 @@ nav {
 
   a {
     margin-left: 20px;
-    color: $lightGray;
+    color: $background;
     text-align: right;
     font-weight: 300;
     letter-spacing: 1px;
@@ -259,9 +267,9 @@ socialmedia {
 .post {
   blockquote {
     margin: 1.8em .8em;
-    border-left: 2px solid $gray;
+    border-left: 2px solid $maincolor;
     padding: 0.1em 1em;
-    color: $gray;
+    color: $maincolor;
     font-size: 22px;
     font-style: italic;
   }
@@ -300,7 +308,7 @@ socialmedia {
   position: absolute;
   bottom: 0px;
   opacity: 0.95;
-  background-color: $darkerGray;
+  background-color: $background;
   overflow: hidden;
   width: 100%;
   height: 0;
@@ -384,9 +392,8 @@ text-align:center;
   border-image-slice: 1;
   border-width: 2px;
 
-  border-image-source: linear-gradient(to right, $darkerGray , $gray 20%, $gray 80%, $darkerGray);
+  border-image-source: linear-gradient(to right, $background , $maincolor 20%, $maincolor 80%, $background);
 
-  color:$gray;
   margin: auto;
    padding: 10px;
 }
@@ -395,6 +402,10 @@ text-align:center;
   border-left: 0;
   border-right: 0;
 
+}
+
+.newslist {
+  padding-bottom:20px;
 }
 
 .responsive {
