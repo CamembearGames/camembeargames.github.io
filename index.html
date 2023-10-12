@@ -17,10 +17,7 @@ layout: default
 </div>
 
 
-  <div class="news">
-    <div class="news-title only-top"><h1>Highlighted project</h1></div>
-<video id="pageBackground_c1dmp_video" class="vid" role="presentation" crossorigin="anonymous" playsinline="" preload="auto" muted="" loop="" tabindex="-1" autoplay="";  style="height: 400px; width: 100%; object-fit: cover; object-position: center center; opacity: 0.6;" src="images/puppy.mp4"></video>
-  </div>
+
 
 
 <div class="posts">
@@ -49,12 +46,12 @@ layout: default
   {% endfor %}
   </div>
 
-  <div class="news-title"><h2>Board and card games</h2></div>
+  <div class="news-title"><h2>Board games</h2></div>
   <div class="gallery">
   {% for post in site.posts %}
     {% if post.type == "board"%}
       <div class="game">
-        <h1>{{ post.title }}</h1>
+        <h3>{{ post.title }}</h3>
         <a href="{{ site.baseurl }}{{ post.url }}"> <img src="{{-post.image | relative_url-}}" alt="" class="blog-roll-image"></a>
       </div>
     {% endif %}

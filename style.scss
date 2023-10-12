@@ -289,6 +289,7 @@ socialmedia {
   height: 300px;
   object-fit: cover;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.5);
+  border-radius: 25px;
 
 
 
@@ -342,10 +343,10 @@ div.container {
     display: grid;
     grid-template-columns: repeat(auto-fill,minmax(200px, 1fr));
     justify-content: center;
-    padding: 2px 2px 75px;
+    padding: 2px 2px 30px;
     grid-gap: 15px;
     
-    margin-bottom: 50px;
+    margin-bottom: 0px;
 }
 
 .wrapper-footer {
@@ -412,6 +413,19 @@ text-align:center;
   width: 100%;
   height: auto;
 }
+
+.game_column {
+  float: left;
+  width: 50%;
+}
+
+/* Clear floats after the columns */
+.game_row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
 
 // Settled on moving the import of syntax highlighting to the bottom of the CSS
 // ... Otherwise it really bloats up the top of the CSS file and makes it difficult to find the start

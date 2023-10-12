@@ -1,0 +1,41 @@
+---
+layout: default
+---
+
+<article class="post">
+  
+
+  <div class="game_row">
+    <div class="game_column">
+
+    <h1>{{ page.title }}</h1>
+
+    <h2>Release information</h2>
+
+    <p>&#x1F4C5; Release date: {{ page.ReleaseDate }}</p>
+    <p>Author: {{ page.Author }}</p>
+    <p>Manufacturer: {{ page.Manufacturer }}</p>
+    <p>&#x1F4CD;Location: {{ page.Location }}</p>
+    <p>&#x1F381;Store: <a href="{{ page.Store }}">{{ page.Store }}</a> </p>
+
+<div >
+
+    <h2>Game information</h2>
+
+    <p>Type: {{ page.typeofgame }}</p>
+    <p> Number of players: {{ page.players }}</p>
+    <p> &#x231B; Duration: {{ page.duration }}</p>
+    <p>Age: {{ page.age }}</p>
+
+</div>
+<div >
+    <h2>Contacts</h2>
+    <a href="mailto:{{ page.Contacts1 }}"><p>&#x1F4DD;{{ page.Contacts1 }}</p></a>
+    <a href="mailto:{{ page.Contacts2 }}"><p>&#x1F4DD;{{ page.Contacts2 }}</p></a>
+</div>
+  </div>
+  <div class="game_column">{{ content }}</div>
+  </div>
+
+
+</article>
