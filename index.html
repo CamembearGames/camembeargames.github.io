@@ -6,6 +6,11 @@ layout: default
 
 
 <div class="news-title"><h2>Latest News</h2></div>
+  <div class="news_row">
+    <div class="news_column">
+      <img src="/images/alphapeep_reading.png" alt="Nature" class="newsimage"> 
+      </div>
+    <div class="news_column">
   <div class="newslist">
   {% for post in site.posts %}
     {% if post.type == "news"%}
@@ -14,14 +19,12 @@ layout: default
 
     {% endif %}
   {% endfor %}
+  </div>
+  </div>
 </div>
 
 
-
-
-
 <div class="posts">
-
 
 
   <div class="news-title"><h2>Video games</h2></div>

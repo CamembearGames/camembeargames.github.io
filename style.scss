@@ -426,6 +426,22 @@ text-align:center;
   clear: both;
 }
 
+.newsimage{
+  width: 50px;
+  height: auto;
+}
+
+.news_column {
+  float: left;
+  width: 50%;
+}
+
+/* Clear floats after the columns */
+.news:after {
+  content: "";
+  display: table;
+  clear: both;
+}
 
 // Settled on moving the import of syntax highlighting to the bottom of the CSS
 // ... Otherwise it really bloats up the top of the CSS file and makes it difficult to find the start
